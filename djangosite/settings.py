@@ -57,7 +57,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            '~/html/DjangoTemplates/',
+            '~/djangosite/html/DjangoTemplates/',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -72,7 +72,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.jinja2.Jinja2',
         'DIRS': [
-            '~/html/jinja2/',
+            '~/djangosite/html/jinja2/',
         ],
         'APP_DIRS': True,
         'OPTIONS': {

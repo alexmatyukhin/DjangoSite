@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'docutils',
+    'example',
 ]
 
 MIDDLEWARE = [
@@ -74,9 +75,9 @@ TEMPLATES = [
         'DIRS': [
             '~/djangosite/html/jinja2/',
         ],
-        'APP_DIRS': False,
+        'APP_DIRS': True,
         'OPTIONS': {
-            'environment': 'jinja2.Environment',
+            'environment': 'djangosite.jinja2.environment',
             'autoescape': True,
             'loader': 'jinja2.FileSystemLoader',
             'auto_reload': DEBUG,
@@ -85,7 +86,7 @@ TEMPLATES = [
         
 ]
 
-FORM_RENDERER = 'django.forms.renderers.DjangoTemplates'
+FORM_RENDERER = 'django.forms.renderers.jinja2'
 
 WSGI_APPLICATION = 'djangosite.wsgi.application'
 

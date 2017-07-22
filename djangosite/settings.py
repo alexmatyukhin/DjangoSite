@@ -142,7 +142,17 @@ USE_L10N = True
 USE_TZ = True
 
 
+
+# User-uploaded files
+MEDIA_ROOT = '~/djangosite/media/'
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+STATIC_ROOT = '~/djangosite/static/'
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    ("css", "~/djangosite/static/css/"),
+    ("js", "~/djangosite/static/javascript/"),
+    ("img", "~/djangosite/static/image/"),
+    ]

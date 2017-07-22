@@ -54,35 +54,38 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'djangosite.urls'
 
 TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            '~/djangosite/html/DjangoTemplates/',
-        ],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
-        },
-    },
+    # {
+    #     'BACKEND': 'django.template.backends.django.DjangoTemplates',
+    #     'DIRS': [
+    #         '~/djangosite/html/DjangoTemplates/',
+    #     ],
+    #     'APP_DIRS': True,
+    #     'OPTIONS': {
+    #         'context_processors': [
+    #             'django.template.context_processors.debug',
+    #             'django.template.context_processors.request',
+    #             'django.contrib.auth.context_processors.auth',
+    #             'django.contrib.messages.context_processors.messages',
+    #         ],
+    #     },
+    # },
     {
         'BACKEND': 'django.template.backends.jinja2.Jinja2',
         'DIRS': [
             '~/djangosite/html/jinja2/',
         ],
-        'APP_DIRS': True,
+        'APP_DIRS': False,
         'OPTIONS': {
             'environment': 'jinja2.Environment',
+            'autoescape': True,
+            'loader': 'jinja2.FileSystemLoader',
+            'auto_reload': DEBUG,
             }
         },
         
 ]
 
-FORM_RENDERER = 'django.template.backends.jinja2.Jinja2'
+FORM_RENDERER = 'django.forms.renderers.DjangoTemplates'
 
 WSGI_APPLICATION = 'djangosite.wsgi.application'
 
@@ -140,6 +143,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+FIRST_DAY_OF_WEEK = 1
 
 
 

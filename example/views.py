@@ -7,13 +7,13 @@ from django.http import HttpResponse
 
 import datetime
 
-# def index(request):
-#     tempt = get_template('index.jinja')
-#     html = tempt.render()
-#     return HttpResponse(html)
-
 def index(request):
-    tempt_name = "index.djt"
+    tempt_name = "index.jinja"
     cont = {}
-    return render(request, tempt_name, context=cont, content_type="text/html")
+    return render (request, tempt_name, context=cont)
+
+# def index(request):
+#     tempt_name = "index.djt"
+#     cont = {}
+#     return render(request, tempt_name, context=cont, content_type="text/html")
 

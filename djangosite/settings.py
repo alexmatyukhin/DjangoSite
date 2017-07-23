@@ -79,7 +79,6 @@ TEMPLATES = [
         'OPTIONS': {
             'environment': 'djangosite.jinja2.environment',
             'autoescape': True,
-            'loader': 'jinja2.FileSystemLoader',
             'auto_reload': DEBUG,
             }
         },

@@ -7,8 +7,8 @@ from django.http import HttpResponse
 
 import datetime
 
-def index(request):
-    tempt_name = "index.jinja"
+def example(request):
+    tempt_name = "example.jinja"
     cont = {}
     return render (request, tempt_name, context=cont)
 

@@ -80,6 +80,7 @@ TEMPLATES = [
             'environment': 'djangosite.jinja2.environment',
             'autoescape': True,
             'auto_reload': DEBUG,
+            'extensions': ['jinja2.ext.i18n'],
             }
         },
         
@@ -134,7 +135,7 @@ USE_THOUSAND_SEPARATOR = True
 
 LOCALE_NAME = 'ru_RU'
 
-LANGUAGE_CODE = 'en-us, en, ru-ru, ru'
+LANGUAGE_CODE = 'ru-ru, ru, en-us, en'
 
 TIME_ZONE = 'Asia/Karachi'
 
@@ -154,10 +155,10 @@ MEDIA_ROOT = '~/djangosite/media/'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_ROOT = '~/djangosite/static/'
+STATIC_ROOT = '/home/alex/djangosite/static/'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    ("css", "~/djangosite/static/css/"),
-    ("js", "~/djangosite/static/javascript/"),
-    ("img", "~/djangosite/static/image/"),
+    ("css", "/home/alex/djangosite/static/css/"),
+    ("js", "/home/alex/djangosite/static/javascript/"),
+    ("img", "/home/alex/djangosite/static/image/"),
     ]
